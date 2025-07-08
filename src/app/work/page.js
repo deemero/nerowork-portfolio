@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 export default function WorkPage() {
   const [time, setTime] = useState("");
   const [current, setCurrent] = useState(0);
+  const [selected, setSelected] = useState(null);
 
   const bibleImages = [
     "/bible1.svg",
@@ -16,6 +17,45 @@ export default function WorkPage() {
     "/bible4.svg",
     "/bible5.svg",
     "/bible6.svg",
+  ];
+
+  const workExperiences = [
+    {
+      title: "System Developer – Jabatan Bendahari Negeri Sabah",
+      year: "2020 - 2025",
+      desc: "Built government internal systems for budgeting and reporting using modern web technologies.",
+      image: "/placeholder.jpg",
+    },
+    {
+      title: "Freelance Developer – Riderunne",
+      year: "2021 - 2025",
+      desc: "Created full-stack systems for delivery tracking and rider management.",
+      image: "/placeholder.jpg",
+    },
+    {
+      title: "Bible Tracker & Revival System",
+      year: "2024 - 2025",
+      desc: "Developed AI-powered Bible reading tracker with user leaderboard and notification system.",
+      image: "/placeholder.jpg",
+    },
+    {
+      title: "Donation & NGO Systems",
+      year: "2023 - 2025",
+      desc: "Built donation platform with receipt upload, admin approval, and church campaign tracking.",
+      image: "/placeholder.jpg",
+    },
+    {
+      title: "E-Commerce App & Website",
+      year: "2023 - 2024",
+      desc: "Designed online store system with payment integration and stock management.",
+      image: "/placeholder.jpg",
+    },
+    {
+      title: "AI Chatbot – Datuk James Ratib",
+      year: "2025",
+      desc: "Created a custom chatbot system with dynamic FAQ for political campaigns.",
+      image: "/placeholder.jpg",
+    },
   ];
 
   useEffect(() => {
@@ -39,11 +79,9 @@ export default function WorkPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-[#0a0a0a] via-[#101010] to-[#0d0d0d] text-white px-4 sm:px-10 pt-6 pb-20 overflow-hidden font-sans relative">
-      {/* Floating Background Glow */}
       <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-purple-600 blur-[120px] rounded-full opacity-30 animate-pulse z-0" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-indigo-700 blur-[100px] rounded-full opacity-20 animate-pulse z-0" />
 
-      {/* Topbar */}
       <div className="flex justify-between text-xs sm:text-sm text-gray-400 mb-4 relative z-10">
         <div>Asia/Kota Kinabalu</div>
         <div>{time}</div>
@@ -51,7 +89,6 @@ export default function WorkPage() {
 
       <Navbar />
 
-      {/* Hero Text */}
       <motion.div
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -70,7 +107,6 @@ export default function WorkPage() {
         </p>
       </motion.div>
 
-      {/* Gallery */}
       <div className="relative max-w-5xl mx-auto mt-8 h-[520px] z-10">
         <AnimatePresence mode="wait">
           <motion.div
@@ -93,7 +129,6 @@ export default function WorkPage() {
           </motion.div>
         </AnimatePresence>
 
-        {/* Nav Buttons */}
         <button
           onClick={prevSlide}
           className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white rounded-full p-3 transition"
@@ -108,7 +143,6 @@ export default function WorkPage() {
         </button>
       </div>
 
-      {/* Indicator */}
       <div className="flex justify-center mt-6 space-x-2 relative z-10">
         {bibleImages.map((_, index) => (
           <motion.div
@@ -125,24 +159,80 @@ export default function WorkPage() {
         ))}
       </div>
 
-      {/* Bottom Card Text */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.2, duration: 1 }}
-        className="max-w-3xl mx-auto mt-16 text-center text-sm text-gray-400 leading-relaxed relative z-10"
-      >
-        Development of a flexible and highly customizable design system using{" "}
-        <span className="text-white font-semibold">Next.js</span> for front-end and{" "}
-        <span className="text-white font-semibold">Figma</span> for design collaboration.
-        <br />
-        <a
-          href="#"
-          className="inline-block mt-3 text-purple-400 hover:underline font-medium transition"
-        >
-          Read case study →
-        </a>
-      </motion.div>
+      {/* Work Experience Detail */}
+      <section className="mt-28 max-w-6xl mx-auto px-4 relative z-10">
+        <h2 className="text-4xl font-bold text-center text-purple-400 mb-12 tracking-wider">
+          Work Experience Details
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+          {workExperiences.map((item, i) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              onClick={() => setSelected(item)}
+              className="cursor-pointer bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-md hover:shadow-purple-500/30 hover:scale-[1.02] transition-all duration-300"
+            >
+              <div className="relative w-full h-48 rounded-xl overflow-hidden mb-4">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex justify-between items-center mb-1">
+                <h3 className="text-lg font-bold text-white">{item.title}</h3>
+                <span className="text-sm text-gray-300">{item.year}</span>
+              </div>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                {item.desc}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Modal */}
+        <AnimatePresence>
+          {selected && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50"
+              onClick={() => setSelected(null)}
+            >
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                onClick={(e) => e.stopPropagation()}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 max-w-lg w-full border border-white/20 shadow-lg text-white"
+              >
+                <div className="relative w-full h-52 rounded-lg overflow-hidden mb-4">
+                  <Image
+                    src={selected.image}
+                    alt={selected.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold mb-2">{selected.title}</h3>
+                <p className="text-sm text-gray-300 mb-2">{selected.year}</p>
+                <p className="text-gray-200 text-base">{selected.desc}</p>
+                <button
+                  onClick={() => setSelected(null)}
+                  className="mt-6 bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-md"
+                >
+                  Close
+                </button>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </section>
     </main>
   );
 }
