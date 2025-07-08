@@ -22,37 +22,37 @@ export default function WorkPage() {
   const workExperiences = [
     {
       title: "System Developer – Jabatan Bendahari Negeri Sabah",
-      year: "2020 - 2025",
+      year: "2023 - Now",
       desc: "Built government internal systems for budgeting and reporting using modern web technologies.",
       image: "/placeholder.jpg",
     },
     {
       title: "Freelance Developer – Riderunne",
-      year: "2021 - 2025",
+      year: "2022 - 2022",
       desc: "Created full-stack systems for delivery tracking and rider management.",
       image: "/placeholder.jpg",
     },
     {
       title: "Bible Tracker & Revival System",
-      year: "2024 - 2025",
+      year: "2025 - Now",
       desc: "Developed AI-powered Bible reading tracker with user leaderboard and notification system.",
       image: "/placeholder.jpg",
     },
     {
       title: "Donation & NGO Systems",
-      year: "2023 - 2025",
+      year: "2024 - Now",
       desc: "Built donation platform with receipt upload, admin approval, and church campaign tracking.",
       image: "/placeholder.jpg",
     },
     {
       title: "E-Commerce App & Website",
-      year: "2023 - 2024",
+      year: "2023 - Now",
       desc: "Designed online store system with payment integration and stock management.",
       image: "/placeholder.jpg",
     },
     {
       title: "AI Chatbot – Datuk James Ratib",
-      year: "2025",
+      year: "2025 - Now",
       desc: "Created a custom chatbot system with dynamic FAQ for political campaigns.",
       image: "/placeholder.jpg",
     },

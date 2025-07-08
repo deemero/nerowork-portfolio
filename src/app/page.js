@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const [step, setStep] = useState(0); // 0: NEROWORK, 1: Logo, 2: Main content
+  const [step, setStep] = useState(0); // 0: Text, 1: Logo, 2: Button
   const router = useRouter();
 
   useEffect(() => {
@@ -72,26 +72,19 @@ export default function Home() {
           >
             <h1 className="text-3xl sm:text-4xl font-bold">Welcome to NEROWORK</h1>
             <p className="text-gray-300 px-4">
-              Explore my work, experience, and packages.
+              Where ideas become websites, and businesses become brands.
             </p>
 
-<motion.button
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.95 }}
-  onClick={() => router.push("/main")}
-  className="relative mt-6 px-8 py-4 text-white text-base sm:text-lg font-semibold rounded-full bg-transparent border-none focus:outline-none group transition-all duration-300 ease-in-out"
->
-  {/* Text Only */}
-  <span className="relative z-10">Enter Website</span>
-
-  {/* Glowing Neon Ring – Hidden until Hover */}
-  <span className="absolute w-[130%] h-[130%] -left-[15%] -top-[15%] rounded-full border border-white opacity-0 blur-[2px] group-hover:opacity-30 animate-rotate-glow transition-all duration-1000 pointer-events-none" />
-
-  {/* Soft Background Glow Inside */}
-  <span className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-10 blur-sm transition-all duration-1000" />
-</motion.button>
-
-
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => router.push("/main")}
+              className="relative mt-6 px-8 py-4 text-white text-base sm:text-lg font-semibold rounded-full bg-transparent border-none focus:outline-none group transition-all duration-300 ease-in-out"
+            >
+              <span className="relative z-10">Enter Website</span>
+              <span className="absolute w-[130%] h-[130%] -left-[15%] -top-[15%] rounded-full border border-white opacity-0 blur-[2px] group-hover:opacity-30 animate-rotate-glow transition-all duration-1000 pointer-events-none" />
+              <span className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-10 blur-sm transition-all duration-1000" />
+            </motion.button>
           </motion.main>
         )}
       </AnimatePresence>

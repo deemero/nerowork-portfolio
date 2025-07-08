@@ -28,8 +28,8 @@ Fast delivery. Stunning look. Affordable price.
 Don't miss it — RM199 only.
 Message us now to book your slot! `,
       image: "/landing-websites.jpg",
-      wa: "https://wa.me/60123456789?text=I%20want%20Landing%20Page%20Basic",
-      sample: "#",
+      wa: "https://wa.me/60132291201?text=I%20want%20Landing%20Page%20Basic",
+      sample: "https://chatbox-ct.vercel.app/",
     },
     {
       title: "Landing Page Plus +",
@@ -50,8 +50,8 @@ Perfect for small businesses, freelancers, personal brands, and home-based servi
 Get connected, look professional — all for just RM299!
 Message us now before slots run out! `,
       image: "/landing-websitesplus.jpg",
-      wa: "https://wa.me/60123456789?text=I%20want%20Company%20Profile%20Website",
-      sample: "#",
+      wa: "https://wa.me/60132291201?text=I%20want%20Company%20Profile%20Website",
+      sample: "https://chatbox-ct.vercel.app/",
     },
     {
       title: "Entry Website",
@@ -90,7 +90,7 @@ RM499 one-time payment – 100% owned by you.
 WhatsApp us now: 013-229 1201`,
       image: "/entry-websites.png",
       wa: "https://wa.me/60132291201?text=I%20want%20Entry%20Website",
-      sample: "#",
+      sample: "https://ljdweb.vercel.app/",
     },
     {
       title: "Premium Website",
@@ -108,8 +108,8 @@ Modern & responsive design – ready to use!
 
 Limited Time Offer – Chat with us now!`,
       image: "/advance-website.png",
-      wa: "https://wa.me/60123456789?text=I%20want%20Church%20Website",
-      sample: "#",
+      wa: "https://wa.me/60132291201?text=I%20want%20Church%20Website",
+      sample: "https://altar-give.vercel.app/",
     },
     {
       title: "Advance Website",
@@ -132,8 +132,8 @@ Professional design, fast setup, mobile-friendly!
 Own your system. One-time payment.
 Limited Time Offer – Contact us now!`,
       image: "/premium-website.png",
-      wa: "https://wa.me/60123456789?text=I%20want%20Donation%20Platform",
-      sample: "#",
+      wa: "https://wa.me/60132291201?text=I%20want%20Donation%20Platform",
+      sample: "https://www.biblerevivalz.com/",
     },
     {
       title: "Custom Website (Premium Plus)",
@@ -158,8 +158,8 @@ Let’s build your dream website.
 Contact us for a free consultation!
 #NeroworkService | Trusted & Professional`,
       image: "/custom-website.png",
-      wa: "https://wa.me/60123456789?text=I%20want%20Donation%20Platform",
-      sample: "#",
+      wa: "https://wa.me/60132291201?text=I%20want%20Donation%20Platform",
+      sample: "https://www.malaysiaairportcabtaxi.com/",
     },
   ];
 

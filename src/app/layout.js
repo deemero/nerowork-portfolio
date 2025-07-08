@@ -1,6 +1,9 @@
+// ❌ JANGAN letak "use client" di sini!
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer"; // Import footer
+import Footer from "@/components/Footer";
+import FloatingWhatsAppLogo from "@/components/FloatingWhatsAppLogo";
+import ClientWrapper from "@/components/ClientWrapper"; // Tambah ini
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +17,10 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Nerowork",
-  description: "Website rasmi oleh syarikat anda.",
+  description: "Make us Unity With Bless.",
+  icons: {
+    icon: "/nerowork-logon.png", // atau .png jika itu yang kau guna
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -23,8 +29,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-black text-white transition-all duration-500`}
       >
-        {children}
-        <Footer /> {/* Footer ada di semua page */}
+        <ClientWrapper>{children}</ClientWrapper>
       </body>
     </html>
   );
