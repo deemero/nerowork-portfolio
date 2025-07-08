@@ -132,7 +132,6 @@ export default function MainPage() {
               </button>
             </motion.div>
 
-            {/* My Drone Video Section */}
          {/* My Drone Video Section */}
 <div className="mt-16 text-center relative z-10">
   <h2 className="text-xl sm:text-2xl font-semibold text-purple-300 mb-4">
@@ -147,7 +146,188 @@ export default function MainPage() {
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen
   />
+  
 </div>
+{/* Pricing Section - Upgraded with Animation */}
+<section className="mt-24 px-4 relative z-10 text-center">
+<motion.h2
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="text-3xl sm:text-5xl font-bold tracking-wide text-white drop-shadow-[0_1px_3px_rgba(255,255,255,0.1)] mb-6"
+>
+  Pricing
+</motion.h2>
+
+
+  <motion.p
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.3, duration: 0.8 }}
+    className="text-gray-400 mb-10"
+  >
+    Choose the plan that fits your goals.
+  </motion.p>
+
+  <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+    {/* Pricing Card */}
+    {[
+      {
+        name: "Simple",
+        price: "Free",
+        bg: "bg-pink-400/90",
+        features: [
+          "✔ For up to 20 businesses",
+          "✔ Mobile + Website Setup",
+          "✔ Drone preview only",
+          "✔ Email Support",
+        ],
+        btnText: "Get Started Free",
+      },
+      {
+        name: "Efficient",
+        price: "RM250+",
+        bg: "bg-cyan-300/90",
+        features: [
+          "✔ Everything in Simple",
+          "✔ Custom Website or App",
+          "✔ 1x Drone Shoot & Edit",
+          "✔ Monthly Support",
+        ],
+        btnText: "Get Efficient Plan",
+      },
+      {
+        name: "Team",
+        price: "RM500+",
+        bg: "bg-yellow-300/90",
+        features: [
+          "✔ Everything in Efficient",
+          "✔ Website + App + Video Package",
+          "✔ Social Media Boost",
+          "✔ Priority Support",
+        ],
+        btnText: "Get Team Plan",
+      },
+    ].map((plan, i) => (
+      <motion.div
+        key={i}
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: i * 0.2, duration: 0.8 }}
+        whileHover={{ scale: 1.06 }}
+        className={`${plan.bg} text-black rounded-2xl p-6 shadow-2xl transition-all duration-300 border-2 border-white/10 hover:shadow-[0_0_25px_rgba(255,255,255,0.3)] backdrop-blur-lg`}
+      >
+        <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+        <p className="text-xl font-semibold mb-4">{plan.price}</p>
+        <ul className="text-sm space-y-2 text-black/80 mb-6 text-left">
+          {plan.features.map((f, idx) => (
+            <li key={idx}>{f}</li>
+          ))}
+        </ul>
+        <button className="w-full bg-black text-white py-2 px-4 rounded-full hover:ring-2 hover:ring-white transition">
+          {plan.btnText}
+        </button>
+      </motion.div>
+    ))}
+  </div>
+
+  {/* See More Button */}
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 1.2, duration: 0.8 }}
+    className="mt-14"
+  >
+ <button
+  onClick={() => window.location.href = '/service'}
+  className="px-5 py-2 rounded-full text-sm font-medium text-white bg-transparent border border-white/15 hover:border-white/30 hover:bg-white/5 backdrop-blur-md shadow-sm hover:shadow-md transition duration-300"
+>
+  See Full Package
+</button>
+
+  </motion.div>
+</section>
+
+{/* About Nerowork Section */}
+<section className="mt-24 max-w-4xl mx-auto text-center px-4 relative z-10">
+  <motion.h3
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    className="text-2xl sm:text-3xl font-bold text-white mb-4 tracking-wide drop-shadow-sm"
+  >
+    Why Choose Nerowork?
+  </motion.h3>
+
+  <motion.p
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.2, duration: 0.8 }}
+    className="text-gray-400 text-sm sm:text-base leading-relaxed"
+  >
+    At <span className="text-white font-semibold">Nerowork</span>, we combine technical precision with creative execution. From mobile apps to drone visuals, we provide end-to-end digital solutions that are affordable, impactful, and designed for growth.
+    <br /><br />
+    Whether you're a startup, creator, or business owner — we craft custom solutions that actually work. No bloated prices, no unnecessary fluff — just clean design and powerful results.
+  </motion.p>
+
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.5, duration: 0.8 }}
+    className="mt-8"
+  >
+
+  </motion.div>
+</section>
+
+{/* Nerowork Highlights Section */}
+<section className="mt-20 max-w-6xl mx-auto px-4 relative z-10">
+  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-white">
+    {/* Mission */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 hover:shadow-lg hover:border-white/20 transition"
+    >
+      <h4 className="text-xl font-semibold mb-3 text-purple-300"> Our Mission</h4>
+      <p className="text-sm text-gray-300">
+        Empower creators, businesses, and teams through clean design and functional digital solutions that scale.
+      </p>
+    </motion.div>
+
+    {/* Vision */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 hover:shadow-lg hover:border-white/20 transition"
+    >
+      <h4 className="text-xl font-semibold mb-3 text-cyan-300"> Our Vision</h4>
+      <p className="text-sm text-gray-300">
+        To become East Malaysia’s most trusted tech partner — building bold ideas, one pixel at a time.
+      </p>
+    </motion.div>
+
+    {/* Solutions */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: 0.4 }}
+      className="bg-white/5 border border-white/10 backdrop-blur-md rounded-2xl p-6 hover:shadow-lg hover:border-white/20 transition"
+    >
+      <h4 className="text-xl font-semibold mb-3 text-yellow-300"> Our Solutions</h4>
+      <p className="text-sm text-gray-300">
+        Mobile Apps · Websites · Drone Content · Digital Marketing · Branding. All built to perform, not just to impress.
+      </p>
+    </motion.div>
+  </div>
+</section>
+
+
 
 </div>
 
