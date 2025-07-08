@@ -122,7 +122,7 @@ export default function MainPage() {
                 className="flex items-center gap-2 px-5 py-2 bg-white/5 dark:bg-white/10 border border-white/20 rounded-full hover:bg-white/20 transition backdrop-blur-md"
               >
                 <Image
-                  src="/avatar.png"
+                  src="/nerowork-logon.png"
                   alt="Avatar"
                   width={24}
                   height={24}
@@ -173,12 +173,12 @@ export default function MainPage() {
     {/* Pricing Card */}
     {[
       {
-        name: "Simple",
-        price: "Free",
+        name: "Basic",
+        price: "Rm 1999",
         bg: "bg-pink-400/90",
         features: [
-          "✔ For up to 20 businesses",
-          "✔ Mobile + Website Setup",
+          "✔ Digital Marketing Basic",
+          "✔ Mobile + Website Basic Build",
           "✔ Drone preview only",
           "✔ Email Support",
         ],
@@ -186,7 +186,7 @@ export default function MainPage() {
       },
       {
         name: "Efficient",
-        price: "RM250+",
+        price: "Rm4399",
         bg: "bg-cyan-300/90",
         features: [
           "✔ Everything in Simple",

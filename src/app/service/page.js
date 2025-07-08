@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import { useRouter } from "next/navigation";
+import OurService from "@/components/OurService";
+import WebsiteCatalog from "@/components/WebsiteCatalog";
+
 
 export default function ServicePage() {
   const [time, setTime] = useState("");
@@ -57,14 +60,14 @@ export default function ServicePage() {
         >
           <h2 className="text-xl font-semibold text-purple-300 mb-2">Website Development</h2>
           <p className="text-gray-300 text-sm">
-            I build websites using Next.js, Tailwind, Supabase, and more.
+            We build custom websites, fast performance, and powerful backend – tailored for your business.
           </p>
-          <button
+          {/* <button
             onClick={() => router.push("https://wa.me/60123456789")}
             className="mt-4 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded-full transition"
           >
             See More
-          </button>
+          </button> */}
         </motion.div>
 
         {/* Mobile App */}
@@ -76,14 +79,14 @@ export default function ServicePage() {
         >
           <h2 className="text-xl font-semibold text-blue-400 mb-2">Mobile App Development</h2>
           <p className="text-gray-300 text-sm">
-            I create modern mobile apps with React Native and Supabase backend.
+            Want an app like Grab or Shopee? We create custom mobile apps for your business – works on Android & iPhone!
           </p>
-          <button
+          {/* <button
             onClick={() => router.push("https://instagram.com/yourprofile")}
             className="mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-full transition"
           >
             See More
-          </button>
+          </button> */}
         </motion.div>
 
         {/* Video Editing */}
@@ -97,102 +100,20 @@ export default function ServicePage() {
           <p className="text-gray-300 text-sm">
             Engaging drone edits, TikTok reels & marketing visuals to boost your brand.
           </p>
-          <button
+          {/* <button
             onClick={() => router.push("https://www.tiktok.com/@yourusername")}
             className="mt-4 px-4 py-2 bg-pink-600 hover:bg-pink-700 text-white text-sm rounded-full transition"
           >
             See More
-          </button>
+          </button> */}
         </motion.div>
       </section>
 
+
       {/* Website Catalog */}
-      <section className="mt-24 max-w-6xl mx-auto relative z-10">
-        <h2 className="text-2xl font-bold text-center text-purple-300 mb-10">Website Catalog</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {[1, 2, 3, 4].map((n) => (
-            <div key={n} className="text-center">
-              <Image
-                src={`/catalog/web${n}.jpg`}
-                alt={`Website ${n}`}
-                width={300}
-                height={200}
-                className="rounded-lg shadow-lg mx-auto"
-              />
-              <p className="mt-2 text-sm text-gray-300">Project {n} description</p>
-            </div>
-          ))}
-        </div>
-        {/* Baris bawah */}
-        <div className="mt-10 text-center">
-          <Image
-            src="/catalog/web5.jpg"
-            alt="Website 5"
-            width={600}
-            height={300}
-            className="rounded-lg shadow-lg mx-auto"
-          />
-          <p className="mt-2 text-sm text-gray-300">Landing page with full animation</p>
-        </div>
-      </section>
+ <WebsiteCatalog />
 
-      {/* Mobile App Catalog */}
-      <section className="mt-24 max-w-6xl mx-auto relative z-10">
-        <h2 className="text-2xl font-bold text-center text-blue-400 mb-10">Mobile App Catalog</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {[1, 2, 3, 4].map((n) => (
-            <div key={n} className="text-center">
-              <Image
-                src={`/catalog/app${n}.jpg`}
-                alt={`App ${n}`}
-                width={300}
-                height={200}
-                className="rounded-lg shadow-lg mx-auto"
-              />
-              <p className="mt-2 text-sm text-gray-300">App {n} description</p>
-            </div>
-          ))}
-        </div>
-        <div className="mt-10 text-center">
-          <Image
-            src="/catalog/app5.jpg"
-            alt="App 5"
-            width={600}
-            height={300}
-            className="rounded-lg shadow-lg mx-auto"
-          />
-          <p className="mt-2 text-sm text-gray-300">Cross-platform app with backend</p>
-        </div>
-      </section>
 
-      {/* Video Editing Catalog */}
-      <section className="mt-24 max-w-6xl mx-auto relative z-10 pb-24">
-        <h2 className="text-2xl font-bold text-center text-pink-400 mb-10">Video Editing Catalog</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {[1, 2, 3, 4].map((n) => (
-            <div key={n} className="text-center">
-              <Image
-                src={`/catalog/video${n}.jpg`}
-                alt={`Video ${n}`}
-                width={300}
-                height={200}
-                className="rounded-lg shadow-lg mx-auto"
-              />
-              <p className="mt-2 text-sm text-gray-300">Drone edit {n}</p>
-            </div>
-          ))}
-        </div>
-        <div className="mt-10 text-center">
-          <Image
-            src="/catalog/video5.jpg"
-            alt="Video 5"
-            width={600}
-            height={300}
-            className="rounded-lg shadow-lg mx-auto"
-          />
-          <p className="mt-2 text-sm text-gray-300">Promo video with cinematic edit</p>
-        </div>
-      </section>
     </main>
   );
 }
