@@ -28,27 +28,27 @@ export default function ContactPage() {
   const socialLinks = [
     {
       icon: <FaFacebook />,
-      url: "https://facebook.com/yourusername",
+      url: "https://www.facebook.com/profile.php?id=100089191419352#",
       color: "hover:text-blue-500",
     },
     {
       icon: <FaInstagram />,
-      url: "https://instagram.com/yourusername",
+      url: "https://www.instagram.com/nerowork_service/",
       color: "hover:text-pink-500",
     },
     {
       icon: <FaWhatsapp />,
-      url: "https://wa.me/60123456789",
+      url: "https://wa.me/60132291201",
       color: "hover:text-green-400",
     },
     {
       icon: <FaTiktok />,
-      url: "https://tiktok.com/@yourusername",
+      url: "https://www.tiktok.com/@nerowork",
       color: "hover:text-white",
     },
     {
       icon: <FaGithub />,
-      url: "https://github.com/yourusername",
+      url: "https://github.com/deemero",
       color: "hover:text-gray-400",
     },
   ];
