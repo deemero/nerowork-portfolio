@@ -68,10 +68,10 @@ export default function Footer() {
             <li><Link href="#">Subscribe</Link></li>
           </ul>
           {/* Store Buttons */}
-          <div className="flex gap-2 mt-4">
+          {/* <div className="flex gap-2 mt-4">
             <Image src="/appstore.png" alt="App Store" width={100} height={30} />
             <Image src="/playstore.png" alt="Google Play" width={100} height={30} />
-          </div>
+          </div> */}
         </div>
       </div>
 
