@@ -122,7 +122,7 @@ export default function MainPage() {
                 className="flex items-center gap-2 px-5 py-2 bg-white/5 dark:bg-white/10 border border-white/20 rounded-full hover:bg-white/20 transition backdrop-blur-md"
               >
                 <Image
-                  src="/nerowork-logon.png"
+                  src="/Nerowork-logon.png"
                   alt="Avatar"
                   width={24}
                   height={24}
