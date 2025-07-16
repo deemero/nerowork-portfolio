@@ -121,13 +121,13 @@ export default function MainPage() {
                 onClick={() => router.push("#about")}
                 className="flex items-center gap-2 px-5 py-2 bg-white/5 dark:bg-white/10 border border-white/20 rounded-full hover:bg-white/20 transition backdrop-blur-md"
               >
-                <Image
+                {/* <Image
                   src="/Nerowork-logon.png"
                   alt="Avatar"
                   width={24}
                   height={24}
                   className="rounded-full"
-                />
+                /> */}
                 <span className="text-sm">About – Nero</span>
               </button>
             </motion.div>
