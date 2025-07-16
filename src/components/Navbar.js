@@ -20,7 +20,7 @@ export default function Navbar({ toggleTheme, theme }) {
       <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-6 bg-black/5 dark:bg-black/30 px-6 py-3 rounded-full border border-black/10 dark:border-white/10 backdrop-blur-md shadow-lg text-sm w-full sm:w-auto">
         
         {/* Logo */}
-        <div className="mr-4 cursor-pointer" onClick={() => router.push("/main")}>
+        {/* <div className="mr-4 cursor-pointer" onClick={() => router.push("/main")}>
           <Image
             src="/nerowork-logon.png"
             alt="Nerowork Logo"
@@ -28,7 +28,7 @@ export default function Navbar({ toggleTheme, theme }) {
             height={32}
             className="rounded-full"
           />
-        </div>
+        </div> */}
 
         {/* Nav Items */}
         {navItems.map((item, index) => {
